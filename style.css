@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;700;800;900&family=Inter&family=Lumanosimo&family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Tektur:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", monospace;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e51e2a;
+    clip-path: circle(50% at bottom right );
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo {
+    position: relative;
+    width: 200px;
+}
+header .navigation ul {
+    position: relative;
+    display: flex;
+}
+/* tirar os pontinhos da lista */
+header .navigation li {
+    list-style: none;
+}
+header .navigation li a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 45px;
+    margin-left: 90px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} .container .text h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    line-height: 2.5em;
+    font-weight: 700;
+} .container .text h2 span {
+    font-size: 2.5em;
+    color: #e51e2a;
+} .container .text p {
+    width: 55%;
+    /* espaçamento entre as linhas */
+    line-height: 1.5;
+    font-size: 20px;
+    color: #fff;
+} .container .text a {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 45px;
+    padding: 10px 25px;
+    background: #e51e2a;
+    color: #fff;
+    /* gorssura da fonte */
+    font-weight: 500;
+    text-decoration: none;
+    /* espacamneto entre as letras */
+    letter-spacing: 1px;
+    border-radius: 40px;
+    /* transicao para dar efeito quando a teal é carregada*/
+    transition: 0.3s ease-in-out;
+} .container .text a:hover {
+    /* quando o mouse estiver por cima */
+    transform: translateY(-10px);
+}
+
+.icon {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} .icon li {
+    list-style: none;
+} .icon li a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: #222;
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+} .icon li a:hover {
+    background-color: #e51e2a;
+    transform: translateY(-10px);
+}
+/* inverter a cor dos icons */
+.icon li a img {
+    /* diminui o tamanho da imagem */
+    transform: scale(0.7);
+    /* altera a cor */
+    filter: invert(1);
+}
+
+.boxImg {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+} .boxImg img {
+    width: 200px;
+} 
+/* rotacao das imagens deg = graus*/
+.boxImg .img1 {
+    transform: rotate(-15deg);
+} .boxImg .img2{
+    transform: rotate(5deg);
+} .boxImg .img3 {
+    transform: rotate(15deg);
+} .boxImg .img4 {
+    transform: rotate(15deg);
+}
+/*  */
+@media only screen and (max-width: 1440px) {
+    .boxImg img {
+        width: 150px;
+    } .container .text a {
+        font-size: 20px;
+    }.container .text p {
+        width: 55%;
+        font-size: 18px;
+    } .container .text h2 {
+        line-height: 1.5em;
+    } header .navigation li a{
+        font-size: 28px;
+        margin-left: 50px;
+    } .container .text h2 span {
+        font-size: 1.5em;
+    }.icon{
+        left: 60px;
+    } .icon li a {
+        width: 60px;
+        height: 60px;
+    } .icon li a img {
+        transform: scale(0.5);
+    }
+} 
+@media only screen and (max-width: 1024px) {
+    header .logo {
+        width: 150px;
+    }.boxImg img {
+        width: 100px;
+    } .container .text p {
+        width: 80%;
+        font-size: 17px;
+    } header .navigation li a {
+        margin-left: 50px;
+        font-size: 25px;
+    } .boxImg img {
+        width: 122px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 40px 50px;
+        width: 100%;
+        left: 10px;
+    } header .navigation li a {
+        font-size: 18px;
+        margin: 20px;
+    } .container .text a {
+        font-size: 14px;
+    } .container .text h2 {
+        font-size: 2.4em;
+    }.container .text h2 span {
+        font-size: 0.8em;
+    } .container .text p {
+        width: 70%;
+        font-size: 16px;
+    }.boxImg img {
+        width: 108px;
+    }.icon li a {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    } .icon li a img {
+        transform: scale(0.4);
+    } section {
+        padding: 60px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .boxImg img {
+        width: 60px;
+    } .container .text p {
+        width: 100%;
+        font-size: 12px;
+    } section {
+        padding: 50px;
+    } .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #e51e2a;
+        clip-path: circle(40% at bottom right );
+    } .container {
+        margin-top: -120px;
+    } .container .text a {
+        margin-top: 15px;
+    } .icon {
+        bottom: 180px;
+        left: 30px;
+    } .icon li a {
+        width: 35px;
+        height: 35px;
+        margin-left: 20px;
+    } .icon li a img {
+        transform: scale(0.3);
+    } .container .text h2 {
+        font-size: 1.5em;
+    }.container .text h2 span {
+        font-size: 1em;
+    } header .logo {
+        width: 100px;
+        margin-bottom: 200px;
+    } header .navigation ul {
+        display: block;
+        margin-top: -142px;
+        left: 20px;
+    } header .navigation li {
+        margin-top: -30px;
+    } header .navigation li a {
+        font-size: 15px;
+    }
+}
+/*  */
